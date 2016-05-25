@@ -28,9 +28,9 @@ $.simpleWeather({
       // Display Icon
       $('#cheney i').addClass( 'icon-' + weather.code );        
       // Get Forecast
-      $('#d1').text(weather.forecast[1].date);
-      $('#d1').text(weather.forecast[1].high);
-      $('#d1').text(weather.forecast[1].code);
+      $('#d1 .day').text(weather.forecast[1].date);
+      $('#d1 .temp').text(weather.forecast[1].high);
+      $('#cheney i').addClass( 'icon-' + weather.forecast[1].code );
         
       // Entire weather object
       console.log(weather);
