@@ -32,6 +32,16 @@ $.simpleWeather({
       $('#d1 .temp').text(weather.forecast[1].high);
       $('#cheney i').addClass( 'icon-' + weather.forecast[1].code );
         
+      // Add Custom Body Class    
+      if ( weather.code >= 26 && weather.code <= 30 ) {
+          
+          // remove
+          $('body').removeClass();
+          // add class
+          $('body').addClass('bg-1');
+          
+      }
+        
       // Entire weather object
       console.log(weather);
     },
@@ -111,6 +121,8 @@ var getWeather = function(location) {
   });
     
 };
+
+
 
 
 
